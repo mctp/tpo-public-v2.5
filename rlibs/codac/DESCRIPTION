@@ -1,0 +1,29 @@
+Package: codac
+Title: Comprehensive Detection and Analysis of Chimeras
+Version: 3.6.1
+Authors@R: person("Marcin", "Cieslik", email = "mcieslik@med.umich.edu", role = c("aut", "cre"))
+Description:
+Depends:
+    R (>= 3.5.0)
+Imports:
+    optparse,
+    igraph,
+    stringr,
+    circlize,
+    S4Vectors,
+    IRanges,
+    data.table,
+    GenomeInfoDb,
+    GenomicRanges,
+    GenomicFeatures,
+    GenomicAlignments,
+    Biostrings,
+    Rsamtools,
+    ShortRead,
+    rtracklayer,
+    BSgenome,
+    BSgenome.Hsapiens.UCSC.hg38
+License: MIT + file LICENSE
+LazyData: true
+RoxygenNote: 7.2.1
+Encoding: UTF-8

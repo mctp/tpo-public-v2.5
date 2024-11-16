@@ -1,0 +1,3 @@
+library(cargo)
+
+makeVault()

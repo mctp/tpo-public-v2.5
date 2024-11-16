@@ -1,0 +1,25 @@
+Package: curve
+Title: CUrated Results Viewing Environment (curve)
+Version: 0.1.6
+Authors@R: person("Hopkins","Alexander",email="hopkinal@med.umich.edu",role="cre")
+Description: Integrate store and display TPO analysis results
+Imports:
+  dplyr,
+  DBI,
+  RPostgreSQL,
+  shinyBS,
+  shinycssloaders,
+  ggplot2,
+  plotly,
+  data.table,
+  pool,
+  stringr,
+  GenomicRanges,
+  DT,
+  ggrepel,
+  cnvex
+License: 
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3

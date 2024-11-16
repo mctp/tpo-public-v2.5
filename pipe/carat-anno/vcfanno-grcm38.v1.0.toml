@@ -1,0 +1,11 @@
+[[annotation]]
+file="/tpo/refs/grcm38/variants/grcm38.mgp.v6.vcf.gz"
+fields=["AF"]
+ops=["self"]
+names=["MGP_AF"]
+
+[[annotation]]
+file="/tpo/refs/grcm38/variants/grcm38.eva.v4.vcf.gz"
+fields = ["ID"]
+ops=["self"]
+names=["dbSNP_RS"]

@@ -1,0 +1,14 @@
+Package: caniq
+Title: Cancer IQ
+Version: 0.9.9
+Description: CanIQ
+Depends:
+    R (>= 3.5.0)
+Imports:
+    dplyr,
+    stringr,
+    data.table
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3

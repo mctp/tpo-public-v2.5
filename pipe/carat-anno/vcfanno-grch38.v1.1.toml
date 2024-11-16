@@ -1,0 +1,59 @@
+[[annotation]]
+file="/tpo/refs/grch38/variants/gdc-mutect2-pon-v4136.vcf.gz"
+fields=["PON"]
+ops=["self"]
+names=["PON"]
+
+[[annotation]]
+file="/tpo/refs/grch38/variants/1kg-phase3.vcf.gz"
+fields=["MAF"]
+ops=["self"]
+names=["KG_AF"]
+
+[[annotation]]
+file="/tpo/refs/grch38/variants/gnomad.exomes.r301.ensembl.vcf.gz"
+fields = ["AF"]
+ops=["self"]
+names=["GNOMAD_AF"]
+
+[[annotation]]
+file="/tpo/refs/grch38/variants/gnomad.exomes.r211.ensembl.vcf.gz"
+fields = ["AF"]
+ops=["self"]
+names=["GNOMAD2_AF"]
+
+[[annotation]]
+file="/tpo/refs/grch38/annotations/clinvar.vcf.gz"
+fields=["ALLELEID", "CLNSIG"]
+ops=["self", "self"]
+names=["CLINVAR_ALLELEID", "CLINVAR_CLNSIG"]
+
+[[annotation]]
+file="/tpo/refs/grch38/annotations/cancer_hotspots.vcf.gz"
+fields = ["MUTATION_HOTSPOT"]
+ops=["self"]
+names=["MUTATION_HOTSPOT"]
+
+[[annotation]]
+file="/tpo/refs/grch38/annotations/cosmic.v87.vcf.gz"
+fields=["CNT"]
+ops=["self"]
+names=["COSMIC_CNT"]
+
+[[annotation]]
+file="/tpo/refs/grch38/variants/common_all_20180418.vcf.gz"
+fields=["RS", "SAO"]
+ops=["self", "self"]
+names=["dbSNP_RS", "dbSNP_SAO"]
+
+[[annotation]]
+file="/tpo/refs/grch38/annotations/uniprot.bed.gz"
+columns=[4]
+ops=["concat"]
+names=["UNIPROT_FEATURE"]
+
+[[annotation]]
+file="/tpo/refs/grch38/annotations/rmsk.bed.gz"
+columns=[4]
+ops=["concat"]
+names=["RMSK_HIT"]

@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+set -eu
+
+## Secrets
+export AWS_ACCESS_KEY_ID=$SECRETS_AWS_ACCESS_KEY_ID
+export AWS_SECRET_ACCESS_KEY=$SECRETS_AWS_SECRET_ACCESS_KEY
+export SENTIEON_LICENSE=$SECRETS_SENTIEON_LICENSE 
+
+## import common functions
+source $ROOT/pipe/common/bash_funcs.sh
+
+## setup work directories
+JOB=$RUNTIME_RUNS/cords-cnvex/$GCP_NAME
+mkdir -p $JOB/{tmp,input,output}
+
+## setup run folder
+source $JOB/config.txt
+
+## import data
+if [ ! -z $ALNT ]; then
+    ALNTID=$(basename $ALNT)
+    mkdir -p $JOB/input/$ALNTID
+    retry 3 gsutil_fast rsync $ALNT $JOB/input/$ALNTID
+fi
+if [ ! -z $ALNN ]; then
+    ALNNID=$(basename $ALNN)
+    mkdir -p $JOB/input/$ALNNID
+    retry 3 gsutil_fast rsync $ALNN $JOB/input/$ALNNID
+fi
+if [ ! -z $TVAR ]; then
+    TVARID=$(basename $TVAR)
+    mkdir -p $JOB/input/target/$TVARID
+    retry 3 gsutil_fast rsync $TVAR $JOB/input/target/$TVARID
+fi
+if [ ! -z $GVAR ]; then
+    GVARID=$(basename $GVAR)
+    mkdir -p $JOB/input/genome/$GVARID
+    retry 3 gsutil_fast rsync $GVAR $JOB/input/genome/$GVARID
+fi
+if [ ! -z $CNVX ]; then
+    CNVXID=$(basename $CNVX)
+    mkdir -p $JOB/input/$CNVXID
+    retry 3 gsutil_fast rsync $CNVX $JOB/input/$CNVXID
+fi    
+if [[ $CNVEX_SETTINGS == gs://* ]]; then
+    CNVEX_SETTINGS_FILE=$(basename $CNVEX_SETTINGS)
+    retry 3 gsutil_fast cp $CNVEX_SETTINGS $JOB/input/$CNVEX_SETTINGS_FILE
+fi
+
+docker run --rm=true \
+       -e SENTIEON_LICENSE \
+       -v $ROOT:/code \
+       -v $RUNTIME_ROOT:/tpo \
+       -v $JOB/tmp:/tmp \
+       -v $JOB:/job \
+       -v $JOB/input:/input \
+       -v $JOB/output:/output \
+       gcr.io/$GCP_PROJECT/tpocords:$TPO_BOOT_VER /code/pipe/cords-cnvex/cords-cnvex_docker.sh

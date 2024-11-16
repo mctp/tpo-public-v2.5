@@ -1,0 +1,46 @@
+Package: cnvex
+Title: CNV Explorer
+Version: 1.1.8
+Authors@R: person("Marcin", "Cieslik", email = "mcieslik@med.umich.edu", role = c("aut", "cre"))
+Description:
+Depends:
+    R (>= 3.5.0)
+Imports:
+    BiocGenerics,
+    optparse,
+    parallel,
+    rtracklayer,
+    matrixStats,
+    Rsamtools,
+    BSgenome.Hsapiens.UCSC.hg38,
+    BSgenome.Mmusculus.UCSC.mm10,
+    GenomeInfoDb,
+    GenomicRanges,
+    S4Vectors,
+    IRanges,
+    data.table,
+    stringr,
+    Biostrings,
+    VariantAnnotation,
+    limma,
+    DNAcopy,
+    DelayedArray,
+    jointseg,
+    raster,
+    sf,
+    robfilter,
+    fastICA,
+    MASS,
+    foreach,
+    doParallel,
+    karyoploteR,
+    cowplot,
+    egg,
+    ggpubr,
+    logger,
+    regioneR,
+    tpolib
+License: MIT + file LICENSE
+LazyData: true
+RoxygenNote: 7.2.3
+Encoding: UTF-8

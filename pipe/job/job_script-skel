@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+echo $(date) >> /job/job_start
+
+set -eu
+shopt -s nullglob
+
+source $1
+
+echo $(date) >> /job/job_done
+

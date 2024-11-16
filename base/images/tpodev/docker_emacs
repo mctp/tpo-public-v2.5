@@ -1,0 +1,70 @@
+(package-initialize)
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+(require 'package)
+(add-to-list 'package-archives '("gnu"   . "https://elpa.gnu.org/packages/") t)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+
+(dolist (package '(use-package))
+   (unless (package-installed-p package)
+       (package-install package)))
+
+(use-package undo-tree
+   :ensure t)
+(use-package ivy
+   :ensure t)
+(use-package company
+   :ensure t)
+(use-package rainbow-delimiters
+   :ensure t)
+(use-package ess
+  :ensure t
+  :init (require 'ess-site))
+
+;; color
+(menu-bar-mode -1)
+(load-theme 'wombat t)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+(setq column-number-mode t)
+
+;; navigation
+(ivy-mode 1)
+(global-undo-tree-mode)
+(global-company-mode)
+(global-set-key (kbd "C-c i") 'make-frame-command)
+(global-set-key (kbd "C-c o") 'delete-frame)
+(global-set-key "\C-x\C-l" 'buffer-menu)
+(windmove-default-keybindings 'meta)
+(setq-default indent-tabs-mode nil)
+
+;; backups
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+(setq delete-old-versions t)
+
+;; R (ESS)
+(setq ess-history-file nil)
+(setq ess-ask-for-ess-directory nil)
+(setq inferior-R-args "--no-restore-history --no-save ")
+(setq ess-use-company t)
+(setq ess-set-style 'RStudio)
+(setq display-buffer-alist '(("\\*R" (display-buffer-same-window))))
+(require 'ess-r-mode)
+(define-key ess-r-mode-map (kbd "M--") #'ess-insert-assign)
+(define-key inferior-ess-r-mode-map (kbd "M--") #'ess-insert-assign)
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages '(undo-tree use-package)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

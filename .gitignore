@@ -1,0 +1,67 @@
+*.ini
+devel
+packrat
+mokefile.ini
+rlibs/install
+zzz
+*.pyc
+.nfs*
+nohup.out
+*~
+*renv*
+*.Rprofile
+.vscode
+
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data files
+.RData
+
+# Example code in package build process
+*-Ex.R
+
+# RStudio files
+.Rproj.user/
+
+# produced vignettes
+vignettes/*.html
+vignettes/*.pdf
+
+# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+.httr-oauth
+
+# Temporary files created by R markdown
+*.utf8.md
+*.knit.md
+
+# Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
+rsconnect/
+packrat/lib*/
+packrat/src/
+
+#unit test
+*unit_test.results
+unit_test*.sh
+test/*
+
+# testting tmp (Duncan)
+*.tar.xz
+*.tar.gz
+*.jar
+*.tar.bz2
+*.table
+*.table.post
+*.sam
+*.cram
+*.cram.crai
+*.bai
+*.bam
+*.fq.gz
+*tpo-mctp-config*
+*.txt
+*.pdf
+*.log
+*.gvcf
+*.idx

@@ -1,0 +1,32 @@
+Package: carat
+Title: Clinically Accurate Reporting of Aberrations in Tumors
+Version: 0.9.9
+Description: Carat
+Depends:
+    R (>= 3.5.0)
+Imports:
+    tpolib,
+    foreach,
+    doParallel,
+    BiocGenerics,
+    BSgenome.Hsapiens.UCSC.hg38,
+    BSgenome.Mmusculus.UCSC.mm10,
+    VariantAnnotation,
+    GenomicRanges,
+    IRanges,
+    S4Vectors,
+    SummarizedExperiment,
+    rtracklayer,
+    GenomeInfoDb,
+    Biostrings,
+    matrixStats,
+    data.table,
+    stringr,
+    jsonlite,
+    StructuralVariantAnnotation,
+    igraph
+License: MIT + file LICENSE
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Encoding: UTF-8

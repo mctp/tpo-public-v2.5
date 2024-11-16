@@ -1,0 +1,291 @@
+table,db_name,display_name,show_table,show_detail
+somatic,chr,Chr,FALSE,TRUE
+somatic,pos,Position,FALSE,TRUE
+somatic,ref,Reference Allele,FALSE,TRUE
+somatic,alt,Alternate Allele,FALSE,TRUE
+somatic,context,Context,FALSE,TRUE
+somatic,gene_name,Gene,TRUE,TRUE
+somatic,gene_id,Gene ID,FALSE,TRUE
+somatic,transcript,Transcript,FALSE,TRUE
+somatic,exon,Exon,FALSE,TRUE
+somatic,hgvsc,DNA Change,FALSE,TRUE
+somatic,hgvsp,Protein Change,TRUE,TRUE
+somatic,consequence,Effect,FALSE,TRUE
+somatic,impact,Impact,FALSE,TRUE
+somatic,sift,SIFT Score,FALSE,TRUE
+somatic,warnings,Warnings,FALSE,TRUE
+somatic,hgvs_equivalent,Equivalent Transcripts,FALSE,TRUE
+somatic,aft,Allele Freq.<br/>(Tumor),TRUE,TRUE
+somatic,adt,Variant Reads<br/>(Tumor),TRUE,TRUE
+somatic,dpt,Depth<br/>(Tumor),TRUE,TRUE
+somatic,afn,Allele Freq.<br/>(Norm),TRUE,TRUE
+somatic,adn,Variant Reads<br/>(Norm),TRUE,TRUE
+somatic,dpn,Depth<br/>(Norm),TRUE,TRUE
+somatic,adt_fwd,Forward Alt Reads<br/>(Tumor),FALSE,TRUE
+somatic,adt_rev,Reverse Alt Reads<br/>(Tumor),FALSE,TRUE
+somatic,str,Simple Tandem Repeat,FALSE,TRUE
+somatic,str_diff,Simple Tandem Repeat (Diff),FALSE,TRUE
+somatic,str_ru,Simple Tandem Repeat (RU),FALSE,TRUE
+somatic,str_len,Simple Tandem Repeat (Len),FALSE,TRUE
+somatic,tlod,TLOD,TRUE,TRUE
+somatic,nlod,NLOD,FALSE,TRUE
+somatic,flod,FLOD(NLODF),FALSE,TRUE
+somatic,xfet,p-val,TRUE,TRUE
+somatic,sor,Strand Odds Ratio,FALSE,TRUE
+somatic,mqrs,Map Quality Rank Sum,FALSE,TRUE
+somatic,mqs,Map Quality Sum,FALSE,TRUE
+somatic,oxog,OxoG Artifact,FALSE,TRUE
+somatic,dbsnp,dbSNP,TRUE,TRUE
+somatic,clinid,ClinVar AlleleID,TRUE,TRUE
+somatic,cosmic_cnt,COSMIC,TRUE,TRUE
+somatic,gnomad_af,gnomAD<br/>Freq.,TRUE,TRUE
+somatic,kg_af,1000G<br/>Freq.,TRUE,TRUE
+somatic,pon,GDC Panel of Normals,FALSE,TRUE
+somatic,rmsk_hit,RepeatMasker,FALSE,TRUE
+somatic,tn,Panel of Tumors Freq.,FALSE,TRUE
+somatic,nn,Panel of Normals Freq.,FALSE,TRUE
+somatic,taf90,90th pctile Panel of Tumors,FALSE,TRUE
+somatic,naf90,90th pctile Panel of Normals,FALSE,TRUE
+somatic,cn,Copy Num.,TRUE,TRUE
+somatic,rpkm,RPKM,TRUE,TRUE
+somatic,recur,Recur,TRUE,TRUE
+germline,chr,Chr,FALSE,TRUE
+germline,pos,Position,FALSE,TRUE
+germline,ref,Reference Allele,FALSE,TRUE
+germline,alt,Alternate Allele,FALSE,TRUE
+germline,context,Context,FALSE,TRUE
+germline,gene_name,Gene,TRUE,TRUE
+germline,gene_id,Gene ID,FALSE,TRUE
+germline,transcript,Transcript,FALSE,TRUE
+germline,exon,Exon,FALSE,TRUE
+germline,hgvsc,DNA Change,FALSE,TRUE
+germline,hgvsp,Protein Change,TRUE,TRUE
+germline,consequence,Effect,FALSE,TRUE
+germline,impact,Impact,FALSE,TRUE
+germline,sift,SIFT Score,FALSE,TRUE
+germline,warnings,Warnings,FALSE,TRUE
+germline,hgvs_equivalent,Equivalent Transcripts,FALSE,TRUE
+germline,afn,Allele Freq.<br/>(Norm),TRUE,TRUE
+germline,adn,Variant Reads<br/>(Norm),TRUE,TRUE
+germline,dpn,Depth<br/>(Norm),TRUE,TRUE
+germline,aft,Allele Freq.<br/>(Tumor),TRUE,TRUE
+germline,adt,Variant Reads<br/>(Tumor),TRUE,TRUE
+germline,dpt,Depth<br/>(Tumor),TRUE,TRUE
+germline,adt_fwd,Forward Alt Reads<br/>(Tumor),FALSE,TRUE
+germline,adt_rev,Reverse Alt Reads<br/>(Tumor),FALSE,TRUE
+germline,str,Simple Tandem Repeat,FALSE,TRUE
+germline,str_diff,Simple Tandem Repeat (Diff),FALSE,TRUE
+germline,str_ru,Simple Tandem Repeat (RU),FALSE,TRUE
+germline,str_len,Simple Tandem Repeat (Len),FALSE,TRUE
+germline,tlod,TLOD,FALSE,FALSE
+germline,nlod,NLOD,FALSE,FALSE
+germline,flod,FLOD(NLODF),FALSE,TRUE
+germline,xfet,p-val,FALSE,FALSE
+germline,sor,Strand Odds Ratio,FALSE,TRUE
+germline,mqrs,Map Quality Rank Sum,FALSE,TRUE
+germline,mqs,Map Quality Sum,FALSE,TRUE
+germline,oxog,OxoG Artifact,FALSE,TRUE
+germline,dbsnp,dbSNP,TRUE,TRUE
+germline,clinid,ClinVar AlleleID,TRUE,TRUE
+germline,cosmic_cnt,COSMIC,TRUE,TRUE
+germline,gnomad_af,gnomAD<br/>Freq.,TRUE,TRUE
+germline,kg_af,1000G<br/>Freq.,TRUE,TRUE
+germline,pon,GDC Panel of Normals,FALSE,TRUE
+germline,rmsk_hit,RepeatMasker,FALSE,TRUE
+germline,tn,Panel of Tumors Freq.,FALSE,TRUE
+germline,nn,Panel of Normals Freq.,FALSE,TRUE
+germline,taf90,90th pctile Panel of Tumors,FALSE,TRUE
+germline,naf90,90th pctile Panel of Normals,FALSE,TRUE
+germline,cn,Copy Num.,TRUE,TRUE
+germline,rpkm,RPKM,TRUE,TRUE
+germline,recur,Recur,TRUE,TRUE
+fusion,gene_names_5_1,Gene 5,TRUE,TRUE
+fusion,pos_5,Pos 5,TRUE,TRUE
+fusion,gene_names_3_1,Gene 3,TRUE,TRUE
+fusion,pos_3,Pos 3,TRUE,TRUE
+fusion,gene_names_5_2,Gene 5 2,FALSE,FALSE
+fusion,gene_names_3_2,Gene 3 2,FALSE,FALSE
+fusion,pair,Pair,FALSE,TRUE
+fusion,tot_enc,Encompassing Reads,TRUE,TRUE
+fusion,sum_jnc,Spanning Reads,TRUE,TRUE
+fusion,dst,Distance,TRUE,TRUE
+fusion,topo,Topology,TRUE,TRUE
+fusion,runid,runid,FALSE,FALSE
+fusion,locus_id_5_1,locus_id_5_1,FALSE,FALSE
+fusion,cyt_5_1,cyt_5_1,FALSE,FALSE
+fusion,locus_id_3_1,locus_id_3_1,FALSE,FALSE
+fusion,cyt_3_1,cyt_3_1,FALSE,FALSE
+fusion,locus_id_5_2,locus_id_5_2,FALSE,FALSE
+fusion,cyt_5_2,cyt_5_2,FALSE,FALSE
+fusion,locus_id_3_2,locus_id_3_2,FALSE,FALSE
+fusion,cyt_3_2,cyt_3_2,FALSE,FALSE
+fusion,gene_ids_5_1,gene_ids_5_1,FALSE,TRUE
+fusion,gene_ids_3_1,gene_ids_3_1,FALSE,TRUE
+fusion,gene_ids_5_2,gene_ids_5_2,FALSE,TRUE
+fusion,gene_ids_3_2,gene_ids_3_2,FALSE,TRUE
+fusion,type,type,FALSE,FALSE
+fusion,chr_5,Chr 5,FALSE,TRUE
+fusion,str_5,str_5,FALSE,FALSE
+fusion,chr_3,Chr 3,FALSE,TRUE
+fusion,str_3,str_3,FALSE,FALSE
+fusion,qname,qname,FALSE,FALSE
+fusion,rep_5,rep_5,FALSE,FALSE
+fusion,rep_3,rep_3,FALSE,FALSE
+fusion,seg_5_pos,seg_5_pos,FALSE,FALSE
+fusion,seg_5_cig,seg_5_cig,FALSE,FALSE
+fusion,seg_3_pos,seg_3_pos,FALSE,FALSE
+fusion,seg_3_cig,seg_3_cig,FALSE,FALSE
+fusion,ftype,ftype,FALSE,FALSE
+fusion,clp_5_l,clp_5_l,FALSE,FALSE
+fusion,clp_5_r,clp_5_r,FALSE,FALSE
+fusion,clp_3_l,clp_3_l,FALSE,FALSE
+fusion,clp_3_r,clp_3_r,FALSE,FALSE
+fusion,seg_5_as,seg_5_as,FALSE,FALSE
+fusion,seg_5_nm,seg_5_nm,FALSE,FALSE
+fusion,seg_5_len,seg_5_len,FALSE,FALSE
+fusion,seg_3_as,seg_3_as,FALSE,FALSE
+fusion,seg_3_nm,seg_3_nm,FALSE,FALSE
+fusion,seg_3_len,seg_3_len,FALSE,FALSE
+fusion,ovr_5,ovr_5,FALSE,FALSE
+fusion,ovr_3,ovr_3,FALSE,FALSE
+fusion,err_5,err_5,FALSE,FALSE
+fusion,err_3,err_3,FALSE,FALSE
+fusion,seq_5,Sequence 5,FALSE,TRUE
+fusion,seq_3,Sequence 3,FALSE,FALSE
+fusion,low_5,low_5,FALSE,FALSE
+fusion,low_3,low_3,FALSE,FALSE
+fusion,unq_jnc,unq_jnc,FALSE,FALSE
+fusion,hq_jnc,hq_jnc,FALSE,FALSE
+fusion,hq_sum_jnc,hq_sum_jnc,FALSE,FALSE
+fusion,unq_sum_jnc,unq_sum_jnc,FALSE,FALSE
+fusion,avg_err_5,avg_err_5,FALSE,FALSE
+fusion,avg_err_3,avg_err_3,FALSE,FALSE
+fusion,avg_low_5,avg_low_5,FALSE,FALSE
+fusion,avg_low_3,avg_low_3,FALSE,FALSE
+fusion,max_ovr_5,max_ovr_5,FALSE,FALSE
+fusion,max_ovr_3,max_ovr_3,FALSE,FALSE
+fusion,unq_ovr_5,unq_ovr_5,FALSE,FALSE
+fusion,unq_ovr_3,unq_ovr_3,FALSE,FALSE
+fusion,cls_5,cls_5,FALSE,FALSE
+fusion,cls_3,cls_3,FALSE,FALSE
+fusion,ss_5,ss_5,FALSE,FALSE
+fusion,ss_3,ss_3,FALSE,FALSE
+fusion,frm_5,frm_5,FALSE,FALSE
+fusion,frm_3,frm_3,FALSE,FALSE
+fusion,orf,In Frame,TRUE,TRUE
+fusion,d2a,Spliced,TRUE,TRUE
+fusion,mot_5,mot_5,FALSE,FALSE
+fusion,mot_3,mot_3,FALSE,FALSE
+fusion,tx_dst,tx_dst,FALSE,FALSE
+fusion,tx_pos_5,tx_pos_5,FALSE,FALSE
+fusion,tx_pos_3,tx_pos_3,FALSE,FALSE
+fusion,gx_dst,gx_dst,FALSE,FALSE
+fusion,bp_dst,bp_dst,FALSE,FALSE
+fusion,art_5,art_5,FALSE,FALSE
+fusion,art_3,art_3,FALSE,FALSE
+fusion,art,art,FALSE,FALSE
+fusion,sum_bpt,sum_bpt,FALSE,FALSE
+fusion,l1,l1,FALSE,FALSE
+fusion,l2,l2,FALSE,FALSE
+fusion,l3,l3,FALSE,FALSE
+fusion,hq_bpt,hq_bpt,FALSE,FALSE
+fusion,hi_bpt,hi_bpt,FALSE,FALSE
+fusion,hr_bpt,hr_bpt,FALSE,FALSE
+fusion,rec_5,rec_5,FALSE,FALSE
+fusion,unq_rec_5,unq_rec_5,FALSE,FALSE
+fusion,rec_3,rec_3,FALSE,FALSE
+fusion,unq_rec_3,unq_rec_3,FALSE,FALSE
+fusion,hc_bpt,hc_bpt,FALSE,FALSE
+fusion,sl_link,sl_link,FALSE,FALSE
+fusion,bs_link,bs_link,FALSE,FALSE
+fusion,ts_link,ts_link,FALSE,FALSE
+fusion,sv_link,sv_link,FALSE,FALSE
+fusion,sl_chain,sl_chain,FALSE,FALSE
+fusion,bs_chain,bs_chain,FALSE,FALSE
+fusion,ts_chain,ts_chain,FALSE,FALSE
+fusion,sv_chain,sv_chain,FALSE,FALSE
+fusion,mm2_valid,MM2 Valid,FALSE,FALSE
+fusion,gmap_valid,GMAP Valid,FALSE,FALSE
+fusion,tot_jnc,tot_jnc,FALSE,FALSE
+fusion,ts_warn,ts_warn,FALSE,FALSE
+fusion,ctg_seq,Contig,FALSE,TRUE
+fusion,tot_sp_jnc_5,tot_sp_jnc_5,FALSE,FALSE
+fusion,tot_sp_jnc_3,tot_sp_jnc_3,FALSE,FALSE
+fusion,tot_jnc_5,tot_jnc_5,FALSE,FALSE
+fusion,tot_jnc_3,tot_jnc_3,FALSE,FALSE
+fusion,csqf5,csqf5,FALSE,FALSE
+fusion,csqf3,csqf3,FALSE,FALSE
+fusion,csqr5,csqr5,FALSE,FALSE
+fusion,csqr3,csqr3,FALSE,FALSE
+fusion,var_id,ID,FALSE,FALSE
+fusion,triage,pass,FALSE,FALSE
+fusion,recur,Recur,TRUE,TRUE
+struc,gene_id_1,Gene ID 1,FALSE,TRUE
+struc,gene_id_2,Gene ID 2,FALSE,TRUE
+struc,gene_name_1,Gene 1,TRUE,TRUE
+struc,gene_name_2,Gene 2,TRUE,TRUE
+struc,topo,Tolology,TRUE,TRUE
+struc,aft,Allele Freq.,TRUE,TRUE
+struc,adt,Variant Reads,TRUE,TRUE
+struc,dpt,Depth,TRUE,TRUE
+struc,csq1,Csq1 1,TRUE,TRUE
+struc,csq2,Csq 2,TRUE,TRUE
+struc,runid,runid,FALSE,FALSE
+struc,bnd_id,bnd_id,FALSE,FALSE
+struc,chr1,chr1,FALSE,FALSE
+struc,chr2,chr2,FALSE,FALSE
+struc,pos1,pos1,FALSE,FALSE
+struc,pos2,pos2,FALSE,FALSE
+struc,insert,Insert,FALSE,TRUE
+struc,qual,Quality,TRUE,TRUE
+struc,manta_filter,MANTA Filter,TRUE,TRUE
+struc,manta_score,MANTA Score,TRUE,TRUE
+struc,manta_contig,manta_contig,FALSE,FALSE
+struc,transcript1,Transcript 1,FALSE,TRUE
+struc,exon1,exon1,FALSE,FALSE
+struc,intron1,intron1,FALSE,FALSE
+struc,strand1,strand1,FALSE,FALSE
+struc,end1,end1,FALSE,FALSE
+struc,transcript2,Transcript 2,FALSE,TRUE
+struc,exon2,exon2,FALSE,FALSE
+struc,intron2,intron2,FALSE,FALSE
+struc,strand2,strand2,FALSE,FALSE
+struc,end2,end2,FALSE,FALSE
+struc,b1,b1,FALSE,FALSE
+struc,b2,b2,FALSE,FALSE
+struc,b12,b12,FALSE,FALSE
+struc,exons1,exons1,FALSE,FALSE
+struc,exons2,exons2,FALSE,FALSE
+struc,var_id,ID,FALSE,FALSE
+cnv,runid,runid,FALSE,FALSE
+cnv,tp,tp,FALSE,FALSE
+cnv,seg,Seg ID,TRUE,TRUE
+cnv,chr,Chr,TRUE,TRUE
+cnv,seg_start,Start,TRUE,TRUE
+cnv,seg_end,End,TRUE,TRUE
+cnv,strand,strand,FALSE,FALSE
+cnv,c,C,TRUE,TRUE
+cnv,k,K,TRUE,TRUE
+cnv,lr,lr,FALSE,TRUE
+cnv,tl,tl,FALSE,FALSE
+cnv,al,al,FALSE,FALSE
+cnv,d,d,FALSE,FALSE
+cnv,anom,anom,FALSE,FALSE
+cnv,mse,mse,FALSE,FALSE
+cnv,nlr,nlr,FALSE,TRUE
+cnv,naf,naf,FALSE,TRUE
+cnv,sc,sc,FALSE,FALSE
+cnv,var_id,var_id,FALSE,FALSE
+cnv,genes,genes,FALSE,FALSE
+cnv,event,Event,TRUE,TRUE
+gxp,alignid,ID,FALSE,TRUE
+gxp,patient,Patient,FALSE,TRUE
+gxp,cohort,cohort,FALSE,TRUE
+gxp,gene_name,Gene,TRUE,FALSE
+gxp,gene_id,Gene ID,TRUE,FALSE
+gxp,rpkm,RPKM,TRUE,TRUE
+gxp,rpkm_ntile,RPKM pct,TRUE,FALSE
+gxp,count,count,FALSE,FALSE
+gxp,cpm,CPM,FALSE,FALSE
+gxp,patient,Patient,FALSE,TRUE
+gxp,c,C,TRUE,FALSE

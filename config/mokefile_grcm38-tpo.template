@@ -1,0 +1,165 @@
+[TPO]
+CODE_VER = ~CUSTOM~
+ROOT_VER = ~CUSTOM~
+BOOT_VER = ~CUSTOM~
+REFS_VER = tpo-refs/v2
+
+[SECRETS]
+SENTIEON_LICENSE = ~CUSTOM~
+CURVE_USER = ~CUSTOM~
+CURVE_PW = ~CUSTOM~
+
+[RUNTIME]
+WORK_BUCKET = ~CUSTOM~
+ROOT = ~CUSTOM~
+WORK = ~CUSTOM~
+TEMP = 
+RUNS = 
+REFS = 
+WORK_DONE = fail
+
+[GCP]
+PROJECT = ~CUSTOM~
+LOCATION = ~CUSTOM~
+ZONE = ~CUSTOM~
+NETWORK = ~CUSTOM~
+SUBNET = ~CUSTOM~
+TAG = linux
+NFS_SHARE = 
+LABEL = user=none,project=none
+SERVICE_ACCOUNT = ~CUSTOM~
+MACHINE_ARGS = 
+BOOT_SIZE = 50
+ROOT_SIZE = 250
+WORK_SIZE = 200
+WORK_VOLUME = ext4
+IMAGE = --image=ubuntu-minimal-2204-jammy-v20221101 --image-project=ubuntu-os-cloud
+
+[BCL]
+BCL2FASTQ_ARGS = ~CUSTOM~
+BCL2FASTQ_SHEET = ~CUSTOM~
+OUTPUT_FORMAT = %s-%s-%s-%s.fq.gz
+
+[CORDS]
+## Alignment
+ALIGN_BWA = -Y -K 10000000
+ALIGN_UMI = ~CUSTOM~
+ALIGN_NAME = grcm38.dna.primary_assembly
+ALIGN_FASTA = /tpo/refs/grcm38/assembly/grcm38.dna.primary_assembly.fa
+ALIGN_INDEX = /tpo/indices/bwa/grch38_full_analysis_set_plus_decoy_hla
+ALIGN_DBSNP = -k /tpo/refs/grcm38/variants/grcm38.99.all.vcf.gz
+ALIGN_INDEL = 
+ALIGN_TRIM = truseq
+ALIGN_GENOTYPE = /tpo/refs/grch38/custom/genotype_positions_hg38.bed
+ALIGN_MASK = 
+ALIGN_FIXRG = false
+ALIGN_SPARK = false
+## Somatic
+SOMATIC_DBSNP = /tpo/refs/grch38/variants/homo_sapiens_assembly38.dbsnp138.vcf.gz
+SOMATIC_REALIGN = true
+SOMATIC_TNSCOPE = true
+SOMATIC_TINSCOPE = false
+SOMATIC_DNASCOPE = true
+SOMATIC_TNSCOPEARGS = --max_fisher_pv_active 0.05 --min_tumor_allele_frac 0.0075 --min_init_tumor_lod 2.5 --assemble_mode 4 --trim_soft_clip
+SOMATIC_TINSCOPEARGS = --max_fisher_pv_active 0.05 --min_tumor_allele_frac 0.0075 --min_init_tumor_lod 2.5 --assemble_mode 4 --trim_soft_clip --normal_contamination_frac 0.25 --prune_factor 4
+SOMATIC_DNASCOPEARGS = --emit_conf 1 --call_conf 1 --ploidy 4
+## Germline
+GERMLINE_DBSNP = /tpo/refs/grch38/variants/homo_sapiens_assembly38.dbsnp138.vcf.gz
+GERMLINE_SEXSNP = ~CUSTOM~
+GERMLINE_INTERVALS = /tpo/refs/grch38/custom/call-intervals
+GERMLINE_REALIGN = true
+GERMLINE_DNASCOPE = true
+GERMLINE_DNASCOPEARGS = --emit_conf 10 --call_conf 10
+## Structural
+STRUCTURAL_DEBUG = true
+STRUCTURAL_TNSCOPE = true
+STRUCTURAL_TNSCOPEARGS = --max_fisher_pv_active 0.05 --min_tumor_allele_frac 0.0075 --min_init_tumor_lod 2.5 --assemble_mode 4 --SVIntrusionThres 5 --min_read_support 3
+STRUCTURAL_MANTA = true
+STRUCTURAL_MANTAARGS = --outputContig --exome
+STRUCTURAL_SVABA = true
+STRUCTURAL_SVABAARGS = 
+STRUCTURAL_GRIDSS = false
+STRUCTURAL_GRIDSSARGS = --jvmheap 25g --skipsoftcliprealignment
+STRUCTURAL_GRIPSSARGS = -pon_sgl_file /tpo/refs/grch38/custom/gridss_pon_single_breakend.hg38.bed -pon_sv_file /tpo/refs/grch38/custom/gridss_pon_breakpoint.hg38.bedpe -known_hotspot_file /tpo/refs/grch38/custom/KnownFusionPairs.hg38.bedpe
+## CNVEX
+CNVEX_ASSEMBLY = hg38
+CNVEX_SETTINGS = ~CUSTOM~
+CNVEX_CAPTURE = ~CUSTOM~
+CNVEX_POOL = ~CUSTOM~
+CNVEX_POPAF = GNOMAD_AF
+CNVEX_PROCESS = true
+CNVEX_SOMATIC = true
+CNVEX_SOMATICSEARCH =
+CNVEX_SOMATICPICK = top4
+CNVEX_SOMATICPLOT = arranged-plot
+CNVEX_GERMLINE = true
+CNVEX_GERMLINESEARCH = --nogrid --nofine
+CNVEX_GERMLINEPICK = top1
+CNVEX_GERMLINEPLOT = 
+## MISC
+MISC_TARGETS = ~CUSTOM~
+MISC_VIRUSFASTA = /tpo/refs/grch38/custom/onco_virus_hg38.fa
+MISC_VIRMERARGS = 
+MISC_VIRMER = true
+MISC_GENOTYPE = true
+MISC_QCMETRICS = true
+MISC_COVMETRICS = true
+MISC_COVPERBASE = false
+MISC_MERGE = true
+
+[CRISP]
+## ALIGN
+ALIGN_UMI = 
+ALIGN_NAME = grcm38.dna.primary_assembly
+ALIGN_FASTA = /tpo/refs/grcm38/assembly/grcm38.dna.primary_assembly.fa
+ALIGN_INDEX = /tpo/indices/star/grcm38.dna.primary_assembly
+ALIGN_DBSNP = -k /tpo/refs/grcm38/variants/grcm38.99.all.vcf.gz
+ALIGN_INDEL = 
+ALIGN_CUTARGS = minlength=25 k=31 qskip=3 rieb=t tbo=t tpe=t
+ALIGN_MRGARGS = k=31 prefilter=2 minoverlap=10 extend2=20 iterations=5
+ALIGN_RRNA = /tpo/refs/grcm38/custom/mus_musculus_rrna.fa
+ALIGN_GENOTYPE = /tpo/refs/grcm38/custom/genotype_positions_v1.bed
+ALIGN_MASK = 
+## GERMLINE
+GERMLINE_DBSNP = /tpo/refs/grch38/variants/homo_sapiens_assembly38.dbsnp138.vcf.gz
+GERMLINE_DNASCOPE = true
+GERMLINE_DNASCOPEARGS = --trim_soft_clip --emit_conf 20 --call_conf 20
+## QUANT
+QUANT_NAME = grcm38.99
+QUANT_FASTA = /tpo/refs/grcm38/ensembl/grcm38.99.clean.cdna.fa
+QUANT_INDEX = /tpo/indices/kallisto/grcm38.99.idx
+QUANT_ARGS = --rf-stranded
+QUANT_GTF = /tpo/refs/grch38/ensembl/grcm38.99.clean.gtf
+## CODAC
+CODAC_GTF = /tpo/refs/grch38/ensembl/grcm38.99.clean.gtf
+CODAC_CONFIG = longread-balanced-stranded
+CODAC_INDEX = --minimap /tpo/indices/minimap2/grch38_noalt_plus_virus.mmi --gmap /tpo/indices/gmap/grch38_noalt_plus_virus
+CODAC_NEO = false
+## QUASR
+QUASR_COUNTGTF = /tpo/refs/grch38/ensembl/grch38.108.clean.gtf
+QUASR_COUNTARGS = -B -p -s1
+QUASR_MIXCRARGS = mixcr-grch38
+QUASR_KEEP = true
+QUASR_MIXCR = true
+QUASR_COUNT = true
+
+[CARAT]
+ANNO_ASSEMBLY = hg38
+ANNO_REGIONS = /tpo/refs/grch38/annotations/annotate_cds_hg38_v1.2.bed
+ANNO_VEPREFS = --assembly GRCh38 --species homo_sapiens --cache_version 108 --fasta /tpo/refs/grch38/assembly/grch38.dna.primary_assembly.fa.gz
+ANNO_VEPARGS = --format vcf --gene_phenotype --symbol --mane --canonical --ccds --hgvs --biotype --tsl --uniprot --domains --appris --protein --variant_class --sift b, --polyphen b --no_stats --total_length --allele_number --no_escape --flag_pick_allele --pick_order canonical,tsl,biotype,rank,ccds,length --buffer_size 20000
+ANNO_VEPCACHE = /tpo/refs/grch38/ensembl/grch38.108.merged.vep.tar
+ANNO_CONFIG = vcfanno-grch38.v1.2
+ANNO_REPORTARGS = ~CUSTOM~
+ANNO_FILTERSOMATIC = 
+ANNO_FILTERGERMLINE = 
+
+[CARGO]
+VAULT_GENEGTF = TODO
+VAULT_HOMOPOLYMERS = TODO
+VAULT_TARGETS = ~CUSTOM~
+VAULT_SETTINGS = default
+VAULT_DUMP = true
+
+[TEST]
+TEST_DRIVE = 
